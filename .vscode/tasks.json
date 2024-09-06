@@ -1,0 +1,33 @@
+{
+    "tasks": [
+        {
+            "type": "cppbuild",
+            "label": "C/C++: g++.exe build active file",
+            "command": "C:\\msys64\\ucrt64\\bin\\g++.exe",
+            "args": [
+                "-g",
+                // stuff to compile
+                "src\\*.cpp",
+                "src\\glad.c",
+                "-I${workspaceFolder}\\include",
+                "-I${workspaceFolder}\\ext\\include",
+                //libs
+                "-L${workspaceFolder}\\ext\\lib",
+                "-lglfw3dll",
+                "-o",
+                "${workspaceFolder}\\build\\tileEngine.exe"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+        }
+    ],
+    "version": "2.0.0"
+}
